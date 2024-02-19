@@ -1,0 +1,13 @@
+name: greeting-using-shell-commands
+on: push
+env:
+  Greeting_Object: "morning"
+job:
+  greeting:
+    runs_on: ubuntu-latest
+    env:
+      Name: "toney"
+    steps:
+      - env: 
+          Greet: "Hi"
+        run: echo "$Greet $Name good $Greeting_Object"
